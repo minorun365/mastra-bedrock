@@ -4,7 +4,7 @@ import { fromNodeProviderChain } from '@aws-sdk/credential-providers';
 
 // Initialize Bedrock client with SSO support
 const bedrockClient = new BedrockRuntimeClient({
-  region: process.env.AWS_REGION || 'us-east-1',
+  region: process.env.BEDROCK_REGION || 'us-west-2',
   credentials: fromNodeProviderChain(),
 });
 
