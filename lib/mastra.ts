@@ -4,6 +4,7 @@ import { createAmazonBedrock } from '@ai-sdk/amazon-bedrock';
 // Create Bedrock client
 const bedrockClient = createAmazonBedrock({
   region: process.env.BEDROCK_REGION || 'us-west-2',
+  // The SDK will automatically use IAM role credentials when running on Lambda
 });
 
 // Initialize the chat agent using Mastra
